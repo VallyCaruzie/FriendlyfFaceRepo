@@ -1,0 +1,70 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 30, in script
+    call screen wc_screen(current_room)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 153, in execute
+    screen inventory_item_description:
+  File "game/script.rpy", line 153, in execute
+    screen inventory_item_description:
+  File "game/script.rpy", line 157, in execute
+    window:
+  File "game/script.rpy", line 163, in execute
+    text item_description:
+  File "game/script.rpy", line 163, in <module>
+    text item_description:
+NameError: name 'item_description' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 30, in script
+    call screen wc_screen(current_room)
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/ast.py", line 1987, in execute
+    self.call("execute")
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/ast.py", line 1966, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/exports/statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/display/core.py", line 2218, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/display/core.py", line 2748, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/display/core.py", line 2748, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Users/michaelvalentin/Documents/renpy-8.3.6-sdk/renpy/display/screen.py", line 700, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 153, in execute
+    screen inventory_item_description:
+  File "game/script.rpy", line 153, in execute
+    screen inventory_item_description:
+  File "game/script.rpy", line 157, in execute
+    window:
+  File "game/script.rpy", line 163, in execute
+    text item_description:
+  File "game/script.rpy", line 163, in <module>
+    text item_description:
+NameError: name 'item_description' is not defined
+
+macOS-14.6-arm64-arm-64bit arm64
+Ren'Py 8.3.7.25031702
+SmilingFaces2 1.0
+Sun Oct 19 21:25:01 2025

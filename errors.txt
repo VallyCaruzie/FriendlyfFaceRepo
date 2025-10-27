@@ -1,0 +1,12 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+The label open_door is defined twice, at File "game/friend_activity.rpy", line 22:
+    label open_door:
+and File "game/script.rpy", line 305:
+    label open_door:
+
+
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Fri Oct 10 19:18:12 2025
